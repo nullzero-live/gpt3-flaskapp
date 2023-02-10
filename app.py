@@ -25,13 +25,13 @@ set_openai_key(KEY_NAME)
 
 
 
-@app.route('/')
+'''@app.route('/')
 def hello_world():
-    return render_template('index.html')
+    return render_template('index.html')'''
 
 #new route for new.html
 
-@app.route('/new', methods=["GET", "POST"])
+@app.route('/', methods=["GET", "POST"])
 def new():
     if request.method == 'POST':
         query = request.form['Description']
