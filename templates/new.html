@@ -1,4 +1,285 @@
 {% extends 'layout.html' %}
 {% block body %}
-Your Second Page
-{% endblock %}
+
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">AI Studio</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
+    <div class="navbar-nav">
+      <div class="nav-item text-nowrap">
+        <a class="nav-link px-3" href="#">Sign out</a>
+      </div>
+    </div>
+  </header>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <span data-feather="home" class="align-text-bottom"></span>
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file" class="align-text-bottom"></span>
+                Blogs
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                Products
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="users" class="align-text-bottom"></span>
+                ebooks
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="bar-chart-2" class="align-text-bottom"></span>
+                Udemy Courses
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="layers" class="align-text-bottom"></span>
+                Publications
+              </a>
+            </li>
+          </ul>
+  
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+            <span>Partners</span>
+            <a class="link-secondary" href="#" aria-label="Add a new report">
+              <span data-feather="plus-circle" class="align-text-bottom"></span>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text" class="align-text-bottom"></span>
+                Funding Agency 1
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text" class="align-text-bottom"></span>
+                Funding Agency 2
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text" class="align-text-bottom"></span>
+                Funding Agency 3
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text" class="align-text-bottom"></span>
+                Subscribe for 
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Your First Web Development</h1>
+          <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group me-2">
+              <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+            </div>
+            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+              <span data-feather="calendar" class="align-text-bottom"></span>
+              This week
+            </button>
+          </div>
+          
+        </div>
+        Hello Everyone! Hello from the team AIStuio!
+        Kuddos! You have just started chasing your dreams!
+        Follow us on LinkedIn <br>
+        https://www.linkedin.com/company/a-istudio
+
+        <main class="w-container">
+            <div class="text-dark text-center p-2 mt-15">
+              <h1>Example: OpenAI Playground Clone</h1> 
+              <p class="lead text-center">You can use this content generator to create your own responses. </p>
+              <h1>OpenAI GPT-3 Content Creater</h1>
+              <p class="lead">You can use this content generator to create your own responses</p>
+            </div>
+
+            <body>
+                <div class="row">
+                  <div class="column text-dark">
+                    <div class="card border-secondary">
+              <!-- <div class="p-30 rounded mt-0.5"> -->
+                      <div class="card text-center">
+                        <h3 class="lead">Adjust Parameters</h3><br>
+                        <form class="" action="/new" method="post">
+                          <!-- <label for="temp">Enter Temp:</label>
+                          <input type="range" min="0" max="1" value="0.1" step="0.1" class="slider" name="temp" id="temp"></input> -->
+                          <label for="temp">Choose Temperature:</label>
+                          <select name="temp" id="temp">
+                            <option value="0.1">0.1</option>
+                            <option value="0.2">0.2</option>
+                            <option value="0.3">0.3</option>
+                            <option value="0.4">0.4</option>
+                            <option value="0.5">0.5</option>
+                            <option value="0.6">0.6</option>
+                            <option value="0.7">0.7</option>
+                            <option value="0.8">0.8</option>
+                            <option value="0.9">0.9</option>
+                            <option value="1">1</option>
+                          </select>             
+                          <!-- <label for="length">Enter Length:</label>
+                          <input type="range" min="0" max="2048" value="5" step="1" class="slider" name="length" id="myRange"></input> -->
+                          <label for="length">Choose Length:</label>
+                          <select name="length" id="length">
+                            <option value="500">500</option>
+                            <option value="1000">1000</option>
+                            <option value="1500">1500</option>
+                            <option value="2048">2048</option>
+                          </select>                         
+                          <!-- <label for="tp">Enter the Value of P:</label>
+                          <input type="range" min="0" max="1" value="0.1" step="0.1" class="slider" name="tp" id="myRange"></input> -->
+                          <label for="tp">Choose The Value of P:</label>
+                          <select name="tp" id="tp">
+                            <option value="0.1">0.1</option>
+                            <option value="0.2">0.2</option>
+                            <option value="0.3">0.3</option>
+                            <option value="0.4">0.4</option>
+                            <option value="0.5">0.5</option>
+                            <option value="0.6">0.6</option>
+                            <option value="0.7">0.7</option>
+                            <option value="0.8">0.8</option>
+                            <option value="0.9">0.9</option>
+                            <option value="1">1</option>
+                          </select>  <br>              
+                          <!-- <label for="freq">Enter Frequency:</label>
+                          <input type="range" min="0" max="2" value="0.1" step="0.1" class="slider" name="freq" id="myRange"></input> -->
+                          <label for="freq">Choose Frequency:</label>
+                          <select name="freq" id="freq">
+                            <option value="0.1">0.1</option>
+                            <option value="0.2">0.2</option>
+                            <option value="0.3">0.3</option>
+                            <option value="0.4">0.4</option>
+                            <option value="0.5">0.5</option>
+                            <option value="0.6">0.6</option>
+                            <option value="0.7">0.7</option>
+                            <option value="0.8">0.8</option>
+                            <option value="0.9">0.9</option>
+                            <option value="1">1</option>
+                            <option value="1.1">1.1</option>
+                            <option value="1.2">1.2</option>
+                            <option value="1.3">1.3</option>
+                            <option value="1.4">1.4</option>
+                            <option value="1.5">1.5</option>
+                            <option value="1.6">1.6</option>
+                            <option value="1.7">1.7</option>
+                            <option value="1.8">1.8</option>
+                            <option value="1.9">1.9</option>
+                            <option value="2">2</option>
+                          </select>                           
+                          <!-- <label for="presence">Presence Penalty:</label>
+                          <input type="range" min="0" max="2" value="0.1" step="0.1" class="slider" name="presence" id="myRange"></input> -->
+                          <label for="presence">Choose Presence Penality:</label>
+                          <select name="presence" id="presence">
+                            <option value="0.1">0.1</option>
+                            <option value="0.2">0.2</option>
+                            <option value="0.3">0.3</option>
+                            <option value="0.4">0.4</option>
+                            <option value="0.5">0.5</option>
+                            <option value="0.6">0.6</option>
+                            <option value="0.7">0.7</option>
+                            <option value="0.8">0.8</option>
+                            <option value="0.9">0.9</option>
+                            <option value="1">1</option>
+                            <option value="1.1">1.1</option>
+                            <option value="1.2">1.2</option>
+                            <option value="1.3">1.3</option>
+                            <option value="1.4">1.4</option>
+                            <option value="1.5">1.5</option>
+                            <option value="1.6">1.6</option>
+                            <option value="1.7">1.7</option>
+                            <option value="1.8">1.8</option>
+                            <option value="1.9">1.9</option>
+                            <option value="2">2</option>
+                          </select>                   
+                          <!-- <label for="bo">Best of:</label>
+                          <input type="range" min="0" max="20" value="1" step="1" class="slider" name="bo" id="myRange"></input><br>
+                           -->
+                          <label for="bo">Choose Best of:</label>
+                          <select name="bo" id="bo">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                          </select> <br>              
+                          <label for="eng">Engine:</label>
+                          <select name="eng" id="Engine">
+                            <option value="">None</option>
+                            <option value="text-davinci-002">text-davinci-002</option>
+                            <option value="text-curie-001">text-curie-001</option>
+                            <option value="text-babbage-001">text-babbage-001</option>
+                            <option value="text-ada-001">text-ada-001</option>
+                            <option value="text-davinci-001">text-davinci-001</option>
+                            <option value="davinci-instruct-beta">davinci-instruct-beta</option>
+                            <option value="davinci">davinci</option>
+                            <option value="curie-instruct-beta">curie-instruct-beta</option>
+                            <option value="curie">curie</option>
+                            <option value="babbage">babbage</option>
+                            <option value="ada">ada</option>
+                          </select>
+                          <div><br>
+                            <h5 class="card-title"> Ask Me Anything!</h5>
+                            <!-- <label class="form-label text-white">Query</label> -->
+                            <input type="text" class="form-control" name="Description" placeholder="Any Query"></input><br>
+                            <button type="submit" class="btn btn-primary"> Results</button>
+                            Click on Results to Obtain AI Oriented Solution
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                </div>
+                <div class="column text-dark">
+                  <div class="card border-secondary">
+                    <p class="lead">Response</p>
+                    <p class="lead">You can read AI Generator responce based on your parameters adjustment below:</p>
+                    <h3 class="lead text-white">{{ prompt }}</h3>
+                    <p class="lead text-white">{{ openAIAnswer }}</p>
+                  </div>
+                </div>
+              </body>
+
+        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+      </main>
+ 
+  {% endblock %}
