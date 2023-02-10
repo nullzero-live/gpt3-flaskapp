@@ -31,7 +31,7 @@ def hello_world():
 
 #new route for new.html
 
-@app.route('/', methods=["GET", "POST"])
+@app.route('/new', methods=["GET", "POST"])
 def new():
     if request.method == 'POST':
         query = request.form['Description']
