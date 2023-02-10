@@ -1,4 +1,161 @@
 {% extends 'layout.html' %}
 {% block body %}
-Alex's GPT-3 API
-{% endblock %}
+        
+        <main class="w-container">
+            <div class="text-dark text-center p-2 mt-15">
+              <h1>OpenAI GPT-3 API</h1>
+              <p class="lead text-center">You can use this content generator to create your own responses. </p>
+             
+            </div>
+
+            <body>
+                <div class="row">
+                  <div class="column text-dark">
+                    <div class="card border-secondary">
+              <!-- <div class="p-30 rounded mt-0.5"> -->
+                      <div class="card text-center">
+                        <h3 class="lead">Adjust Parameters</h3><br>
+                        <form class="" action="/new" method="post">
+                          <!-- <label for="temp">Enter Temp:</label>
+                          <input type="range" min="0" max="1" value="0.1" step="0.1" class="slider" name="temp" id="temp"></input> -->
+                          <label for="temp">Choose Temperature:</label>
+                          <select name="temp" id="temp">
+                            <option value="0.1">0.1</option>
+                            <option value="0.2">0.2</option>
+                            <option value="0.3">0.3</option>
+                            <option value="0.4">0.4</option>
+                            <option value="0.5">0.5</option>
+                            <option value="0.6">0.6</option>
+                            <option value="0.7">0.7</option>
+                            <option value="0.8">0.8</option>
+                            <option value="0.9">0.9</option>
+                            <option value="1">1</option>
+                          </select>             
+                          <!-- <label for="length">Enter Length:</label>
+                          <input type="range" min="0" max="2048" value="5" step="1" class="slider" name="length" id="myRange"></input> -->
+                          <label for="length">Choose Length:</label>
+                          <select name="length" id="length">
+                            <option value="100">100</option>
+                            <option value="500">500</option>
+                            <option value="1000">1000</option>
+                            <option value="1500">1500</option>
+                            <option value="2048">2048</option>
+                          </select>                         
+                          <!-- <label for="tp">Enter the Value of P:</label>
+                          <input type="range" min="0" max="1" value="0.1" step="0.1" class="slider" name="tp" id="myRange"></input> -->
+                          <label for="tp">Choose The Value of P:</label>
+                          <select name="tp" id="tp">
+                            <option value="0.1">0.1</option>
+                            <option value="0.2">0.2</option>
+                            <option value="0.3">0.3</option>
+                            <option value="0.4">0.4</option>
+                            <option value="0.5">0.5</option>
+                            <option value="0.6">0.6</option>
+                            <option value="0.7">0.7</option>
+                            <option value="0.8">0.8</option>
+                            <option value="0.9">0.9</option>
+                            <option value="1">1</option>
+                          </select>  <br>              
+                          <!-- <label for="freq">Enter Frequency:</label>
+                          <input type="range" min="0" max="2" value="0.1" step="0.1" class="slider" name="freq" id="myRange"></input> -->
+                          <label for="freq">Choose Frequency:</label>
+                          <select name="freq" id="freq">
+                            <option value="0.1">0.1</option>
+                            <option value="0.2">0.2</option>
+                            <option value="0.3">0.3</option>
+                            <option value="0.4">0.4</option>
+                            <option value="0.5">0.5</option>
+                            <option value="0.6">0.6</option>
+                            <option value="0.7">0.7</option>
+                            <option value="0.8">0.8</option>
+                            <option value="0.9">0.9</option>
+                            <option value="1">1</option>
+                            <option value="1.1">1.1</option>
+                            <option value="1.2">1.2</option>
+                            <option value="1.3">1.3</option>
+                            <option value="1.4">1.4</option>
+                            <option value="1.5">1.5</option>
+                            <option value="1.6">1.6</option>
+                            <option value="1.7">1.7</option>
+                            <option value="1.8">1.8</option>
+                            <option value="1.9">1.9</option>
+                            <option value="2">2</option>
+                          </select>                           
+                          <!-- <label for="presence">Presence Penalty:</label>
+                          <input type="range" min="0" max="2" value="0.1" step="0.1" class="slider" name="presence" id="myRange"></input> -->
+                          <label for="presence">Choose Presence Penality:</label>
+                          <select name="presence" id="presence">
+                            <option value="0.1">0.1</option>
+                            <option value="0.2">0.2</option>
+                            <option value="0.3">0.3</option>
+                            <option value="0.4">0.4</option>
+                            <option value="0.5">0.5</option>
+                            <option value="0.6">0.6</option>
+                            <option value="0.7">0.7</option>
+                            <option value="0.8">0.8</option>
+                            <option value="0.9">0.9</option>
+                            <option value="1">1</option>
+                            <option value="1.1">1.1</option>
+                            <option value="1.2">1.2</option>
+                            <option value="1.3">1.3</option>
+                            <option value="1.4">1.4</option>
+                            <option value="1.5">1.5</option>
+                            <option value="1.6">1.6</option>
+                            <option value="1.7">1.7</option>
+                            <option value="1.8">1.8</option>
+                            <option value="1.9">1.9</option>
+                            <option value="2">2</option>
+                          </select>                   
+                          <!-- <label for="bo">Best of:</label>
+                          <input type="range" min="0" max="20" value="1" step="1" class="slider" name="bo" id="myRange"></input><br>
+                           -->
+                          <label for="bo">Choose Best of:</label>
+                          <select name="bo" id="bo">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                          </select> <br>              
+                          
+                          
+                          <div><br>
+                            <h5 class="card-title">Enter your prompt</h5>
+                            <!-- <label class="form-label text-white">Query</label> -->
+                            <input type="text" class="form-control" name="Description" placeholder="Any Query"></input><br>
+                            <button type="submit" class="btn btn-primary"> Results</button>
+                            Click on Results to Obtain GPT-3's response
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                </div>
+                <div class="column text-dark">
+                  <div class="card border-secondary">
+                    <p class="lead"><b>Response:</b></p>
+                    
+                    <h3 class="lead text-dark">{{ prompt }}</h3>
+                    <p class="lead text-dark">{{ openAIAnswer }}</p>
+                  </div>
+                </div>
+              </body>
+
+        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+      </main>
+ 
+  {% endblock %}

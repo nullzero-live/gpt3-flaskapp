@@ -25,9 +25,9 @@ set_openai_key(KEY_NAME)
 
 
 
-'''@app.route('/')
+@app.route('/')
 def hello_world():
-    return render_template('index.html')'''
+    return render_template('index.html')
 
 #new route for new.html
 
@@ -49,4 +49,4 @@ def new():
         bo = int(bo)
         eng = 'text-davinci-003'
         openAIAnswer = aicontent.openAIQuery(eng,query,temp,length,tp,freq,presence,bo)
-    return render_template('new.html', **locals())
+    return render_template('/new.html', **locals())
