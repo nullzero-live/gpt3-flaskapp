@@ -47,6 +47,6 @@ def new():
         presence = float(presence)
         bo = request.form['bo']
         bo = int(bo)
-        eng = request.form['eng']
+        eng = 'text-davinci-003'
         openAIAnswer = aicontent.openAIQuery(eng,query,temp,length,tp,freq,presence,bo)
     return render_template('new.html', **locals())
